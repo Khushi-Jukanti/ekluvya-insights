@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { CouponDetails, CouponTransactionsResponse } from "@/types";
-
-const BASE_URL = "http://localhost:7000/api";
+import { BASE_URL } from "@/config/api";
 
 export const searchCoupon = async (code: string): Promise<CouponDetails> => {
   const response = await fetch(`${BASE_URL}/coupons/search?q=${encodeURIComponent(code)}`);

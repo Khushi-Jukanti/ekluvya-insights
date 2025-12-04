@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { TransactionsResponse, DateRange } from "@/types";
-
-const BASE_URL = "http://localhost:7000/api";
+import { BASE_URL } from "@/config/api";
 
 interface UseTransactionsParams {
   page: number;
